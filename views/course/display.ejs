@@ -1,0 +1,58 @@
+<%- include("../header.ejs") %>
+    
+    <h1 class=" text-center mt-5"><b>Course Display</b></h1>
+    <div class="container">
+        <table class="table table-bordered text-center">
+            <tr>
+                <th style="background-color: cadetblue;">ID</th>
+                <th style="background-color: cadetblue;">Name</th>
+                <th style="background-color: cadetblue;">Email</th>
+                <th style="background-color: cadetblue;">Course</th>
+                <th style="background-color: cadetblue;">Status</th>
+                <th style="background-color: cadetblue;">Message</th>
+                
+                <th style="background-color: cadetblue;">Action</th>
+
+            </tr>
+
+            <% c.forEach((item)=> { %>
+                <tr>
+                    <td>
+                        <%= item.id %>
+                    </td>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= item.email %>
+                    </td>
+                    <td>
+                        <%= item.course %>
+                    </td>
+                    <td>
+                        <%= item.status %>
+                    </td>
+                    <td>
+                        <%= item.comment %>
+                    </td>
+                    
+                    <td>
+                        <a href="/courseView/<%= item.id %>" class="btn btn-info">View</a>
+                        <a href="/courseEdit/<%= item.id %>" class="btn btn-success">Edit</a>
+                        
+                    </td>
+                </tr>
+
+                <% }) %>
+
+
+
+        </table>
+        <a href="/home" class="btn btn-info">Back</a>
+
+    </div>
+
+
+
+
+    <%- include("../footer.ejs") %>

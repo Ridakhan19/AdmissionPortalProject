@@ -1,0 +1,54 @@
+<%- include("../header.ejs") %>
+    <br><br><br>
+    <h1 class="text-center mt-5"><b>View Display</b></h1>
+    <div class="container">
+        <table class="table table-bordered text-center">
+            <tr>
+                <th style="background-color: cadetblue;">ID</th>
+                <th style="background-color: cadetblue;">Name</th>
+                <th style="background-color: cadetblue;">Email</th>
+                <th style="background-color: cadetblue;">Course</th>
+                <th style="background-color: cadetblue;">Status</th>
+                <th style="background-color: cadetblue;">Message</th>
+
+
+
+            </tr>
+
+
+            <tr>
+                <td>
+                    <%= c.id %>
+                </td>
+                <td>
+                    <%= c.name %>
+                </td>
+                <td>
+                    <%= c.email %>
+                </td>
+                <td>
+                    <%= c.course %>
+                </td>
+                <td>
+                    <%= c.status %>
+                </td>
+                <td>
+                    <%= c.comment %>
+                </td>
+
+
+            </tr>
+
+
+
+
+
+        </table>
+        <a href="/courseDisplay" class="btn btn-info">Back</a>
+
+    </div>
+
+
+
+
+    <%- include("../footer.ejs") %>

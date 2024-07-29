@@ -1,0 +1,57 @@
+<%- include("../header.ejs") %>
+    <br><br><br>
+    <h1 class="text-center mt-5" style="background-color: cadetblue;">Edit Display</h1>
+    <div class="container">
+        <form action="/courseUpdate/<%= c.id %>" method="post">
+            <div class="mb-3">
+                <label for="">Name</label>
+                <input type="text" value="<%= c.name %>" name="name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="">Email</label>
+                <input type="text" value="<%= c.email %>" name="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="">Phone No.</label>
+                <input type="number" value="<%= c.phone %>" name="phone" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="">DOB</label>
+                <input type="date" value="<%= c.dob %>" name="dob" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="">Address</label>
+                <textarea name="address" class="form-control">
+                    <%= c.address %>
+                </textarea>
+            </div>
+            <div class="mb-3">
+                <label for="">Gender</label>
+                <input type="radio" name="gender" value="male" <%=c.gender=='male'?'checked':'' %> >Male
+                <input type="radio" name="gender" value="female" <%=c.gender=='female'?'checked':'' %> >Female
+            </div>
+            <div class="mb-3">
+                <label for="">Education</label>
+                <select name="education" class="form-control form-select">
+                    <!-- <option value=""></option> -->
+                    <option value="10" <%=c.college =='10' ? 'selected':'' %> >10th</option>
+                    <option value="12" <%=c.college =='12' ? 'selected':'' %> >12th</option>
+
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="">Course</label>
+                <input type="text" readonly value="btech" class="form-control" name="course">
+            </div>
+            <button type="submit" class="btn btn-success">Update</button>
+
+        </form>
+
+
+    </div>
+
+
+
+
+    

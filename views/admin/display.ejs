@@ -1,0 +1,79 @@
+<%- include("../header.ejs") %>
+    <br><br><br>
+    <h1 class="bg text-center mt-5" style="background-color: cadetblue;">Course Display</h1>
+    <div class="container">
+        <% if(msg.length > 0){ %>
+            <div class="alert alert-success">
+                <!-- To Print -->
+                <%= msg %>
+            </div>
+        <% } %>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th style="background-color: cadetblue;">ID</th>
+                <th style="background-color: cadetblue;">Name</th>
+                <th style="background-color: cadetblue;">Email</th>
+                <th style="background-color: cadetblue;">Course</th>
+                <th style="background-color: cadetblue;">Status</th>
+                <th style="background-color: cadetblue;">Message</th>
+                <th style="background-color: cadetblue;">Feedback</th>
+                <th style="background-color: cadetblue;">Admission Status</th>
+                <th style="background-color: cadetblue;">Action</th>
+            </tr>
+
+            <% c.forEach((item)=> { %>
+                <tr>
+                    <td>
+                        <%= item.id %>
+                    </td>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= item.email %>
+                    </td>
+                    <td>
+                        <%= item.course %>
+                    </td>
+                    <td>
+                        <%= item.status %>
+                    </td>
+                    <td>
+                        <%= item.comment %>
+                    </td>
+                    <td>
+                        <form action="/admin/updateStatus/<%= item.id %>" method="post">
+                            <textarea name="comment" id=""></textarea>
+                            <input type="hidden" name="name" value="<%= item.name %>">
+                            <input type="hidden" name="email" value="<%= item.email %>">
+                            <input type="hidden" name="course" value="<%= item.course %>">
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-info text-white" name="status"
+                            value="Approved">Approved</button>
+                            <br>
+                            <br>
+
+                        <button type="submit" class="btn btn-danger" name="status" 
+                        value="Rejected">Rejected</button>
+                        </form>
+                    </td>
+                    <td>
+                        
+                        <a href="/admin/courseDelete/<%= item.id %>" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+
+            <% }) %>
+
+
+
+        </table>
+        <a href="/home" class="btn btn-info">Back</a>
+
+    </div>
+
+
+
+
+    <%- include("../footer.ejs") %>

@@ -1,0 +1,159 @@
+/* ---------------------------------------------------------------
+                            General
+------------------------------------------------------------------ */
+
+body{
+     background: white !important;
+}
+
+::placeholder{
+    color: gray !important;
+    font-weight: lighter;
+}
+
+
+button{
+    background: #2a1a6f;
+}
+
+/* ---------------------------------------------------------------
+                           #navbar
+------------------------------------------------------------------ */
+
+#navbar nav{
+    
+
+    background:none;
+    height: 78px;
+    
+    
+}
+.nav-link{
+    color:rgb(54, 54, 145) ;
+}
+
+.webViewPosition{
+    text-align: start !important;
+}
+
+/* ---------------------------------------------------------------
+                            #carousel
+------------------------------------------------------------------ */
+
+.carouselHeight{
+    height: 100vh;
+}
+
+/* ---------------------------------------------------------------
+                            #login
+------------------------------------------------------------------ */
+
+.c1{
+    border: 1px solid rgb(54, 54, 145);
+    border-radius: 3px;
+     margin-top: 50px;
+  /*  margin-bottom: 50px; */
+}
+.box-1{
+   /* min-height: 250px;  */
+    padding: 0px;
+}
+.box-2{
+   min-height: 250px; 
+    background: white;
+    padding-left: 45px;
+    padding-right: 80px;
+    font-family: auto;
+}
+
+/* ---------------------------------------------------------------
+                            #register
+------------------------------------------------------------------ */
+.c2{
+    border: 1px solid rgb(54, 54, 145);
+    border-radius: 4px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.box-1{
+    min-height: 250px;
+    padding: 0px;
+}
+.box-2{
+    min-height: 250px;
+    background: white;
+    padding-left: 45px;
+    padding-right: 80px;
+    font-family: auto;
+}
+
+/* ---------------------------------------------------------------
+                            #profile
+------------------------------------------------------------------ */
+.card-img-top{
+    width: 60%;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10 rgba(0,0,0,.2);
+}
+.card{
+    padding: 1.5em .5em .5em;
+    text-align: center;
+    box-shadow: 0 0 10 rgba(0,0,0,.2);
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------------
+                            #footer
+------------------------------------------------------------------ */
+
+#footer
+{
+    background: rgb(54, 54, 145);
+    
+}
+
+#social{
+    background: white;
+}
+
+#detail p{
+    text-align: justify;
+}
+
+/* ---------------------------------------------------------------
+                            About
+------------------------------------------------------------------ */
+
+.page-title-area {
+    position: relative;
+    z-index: 1;
+}
+
+.paddingValue label
+{
+    padding: 0 !important;
+}
+
+/* ---------------------------------------------------------------
+                            Media Query
+------------------------------------------------------------------ */
+
+@media (max-width:992px) {
+    #navbarsExample11{
+        justify-content: center !important;
+    }
+
+    .mobileViewButton{
+        background: white !important;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
