@@ -109,7 +109,7 @@ class FrontController {
                              //redirect to login page
                             req.flash(
                                 "success",
-                                "You Successfully Regustered! please verify your email."
+                                "You Successfully Registered! please verify your email."
                             );
                             res.redirect("/");
                         } else{
